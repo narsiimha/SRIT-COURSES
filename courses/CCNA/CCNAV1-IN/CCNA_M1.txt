@@ -1,0 +1,236 @@
+- Internet Access Technologies
+Home users, remote workers, and small offices typically require a connection to an ISP to access the internet.
+
+popular choices include broadband cable, broadband digital subscriber line (DSL), wireless WANs, and mobile services.
+
+SPs offer business-class interconnections. Popular business-class services include business DSL, leased lines, and Metro Ethernet.
+
+---
+
+- Home and Small Office Internet Connections
+Cable:  It provides a high bandwidth, high availability, and an always-on connection to the internet.
+DSL: high bandwidth, high availability, and an always-on connection to the internet.
+Cellular:
+Satellite:
+Dail-up Telephone:
+---
+
+- Businesses Internet Connections
+Dedicated Leased Line:
+Metro Ethernet:
+Business DSL:
+Satellite:
+---
+
+- The Converging Network
+
+Traditional Separate Networks:  Multiple services ran on multiple networks.
+Converged Networks: Converged data networks carry multiple services on one network.
+
+---
+
++++
+
+--- 
+Reliable Networks
+-Network Architecture:
+
+reliability means more than your connection to the internet. 
+
+The term network architecture, in this context, refers to the technologies that support the infrastructure and the programmed services and rules, or protocols, that move data across the network.
+
+there are four basic characteristics that network architects must address to meet user expectations:
+Fault Tolerance
+Scalability
+Quality of Service (QoS)
+Security
+
+- Fault Tolerance:
+
+A fault tolerant network is one that limits the number of affected devices during a failure. 
+Implementing a packet-switched network is one way that reliable networks provide redundancy. 
+
+- Scalability:
+
+A scalable network expands quickly to support new users and applications. 
+It does this without degrading the performance of services that are being accessed by existing users.
+
+- Quality of Service:
+
+QoS becomes a primary mechanism for managing congestion and ensuring reliable delivery of content to all users.
+
+Congestion occurs when the demand for bandwidth exceeds the amount available. 
+
+Network bandwidth is measured in the number of bits that can be transmitted in a single second, or bits per second (bps).
+
+the router can manage the flow of data and voice traffic, giving priority to voice communications if the network experiences congestion.The focus of QoS is to prioritize time-sensitive traffic. 
+
+- Network Security
+
+Network administrators must address two types of network security concerns: network infrastructure security and information security.
+
+Securing the network infrastructure includes physically securing devices that provide network connectivity and preventing unauthorized access to the management software that resides on them.
+
+In order to achieve the goals of network security, there are three primary requirements.
+
+Confidentiality: 
+
+Integrity:
+
+Availability:
+
+---
+Network Trends
+
+- Recent Trends
+
+There are several networking trends that affect organizations and consumers:
+
+Bring Your Own Device (BYOD)
+Online collaboration
+Video communications
+Cloud Computing
+
+- Bring Your Own Device (BYOD)
+
+BYOD enables end users the freedom to use personal tools to access information and communicate across a business or campus network
+
+These include laptops, notebooks, tablets, smart phones, and e-readers.
+
+BYOD means any device, with any ownership, used anywhere.
+
+- Online Collaboration
+
+Collaboration is defined as “the act of working with another or others on a joint project.” Collaboration tools, like Cisco WebEx.
+
+Cisco Webex Teams is a multifunctional collaboration tool that lets you send instant messages to one or more people, post images, and post videos and links. Each team ‘space’ maintains a history of everything that is posted there.
+
+- Video Communications
+
+Video conferencing is a powerful tool for communicating with others, both locally and globally. 
+Video is becoming a critical requirement for effective collaboration as organizations extend across geographic and cultural boundaries.
+
+- Video - Cisco Webex for Huddles
+
+- Cloud Computing
+
+Cloud computing is possible because of data centers.
+
+Data centers are typically very expensive to build and maintain. For this reason, only large organizations use privately built data centers to house their data and provide services to users.
+
+For security, reliability, and fault tolerance, cloud providers often store data in distributed data centers. 
+
+There are four primary types of clouds: Public clouds, Private clouds, Hybrid clouds, and Community clouds
+
+- Technology Trends in the Home
+
+The newest home trends include ‘smart home technology’.
+
+Smart home technology integrates into every-day appliances, which can then connect with other devices to make the appliances more ‘smart’ or automated.
+
+Smart home technology is currently being developed for all rooms within a house. Smart home technology will become more common as home networking and high-speed internet technology expands.
+
+- Powerline Networking
+
+Powerline networking for home networks uses existing electrical wiring to connect devices, 
+
+Powerline networking is especially useful when wireless access points cannot reach all the devices in the home.
+
+Powerline networking is not a substitute for dedicated cabling in data networks. However, it is an alternative when data network cables or wireless communications are not possible or effective.
+
+- Wireless Broadband
+
+In many areas where cable and DSL are not available, wireless may be used to connect to the internet.
+
+Wireless Internet Service Provider(WISP):
+
+WISPs are more commonly found in rural environments where DSL or cable services are not available.
+ 
+Similar to WLAN
+
+Wireless Broadband Service:
+
+Another wireless solution for the home and small businesses is wireless broadband.
+
+In many areas, home wireless broadband is competing directly with DSL and cable services.
+
+---
+Network Security
+
+- Security Threats:
+
+There are several common external threats to networks:
+
+Viruses, worms, and Trojan horses
+
+Spyware and adware 
+
+Zero-day attacks 
+
+Threat actor attacks
+
+Denial of service attacks
+
+Data interception and theft
+
+Identity theft
+
+- Security Solutions
+
+No single solution can protect the network from the variety of threats that exist. For this reason, security should be implemented in multiple layers, using more than one security solution. If one security component fails to identify and protect the network, others may succeed.
+
+These are the basic security components for a home or small office network:
+
+Antivirus and antispyware
+Firewall filtering
+
+Larger networks and corporate networks use antivirus, antispyware, and firewall filtering, but they also have other security requirements:
+
+Dedicated firewall systems
+Access control lists (ACL)
+Intrusion prevention systems (IPS)
+Virtual private networks (VPN) 
+
+The study of network security threats and mitigation techniques starts with a clear understanding of the underlying switching and routing infrastructure used to organize network services.
+
+---
+The IT Professional
+
+- CCNA:
+
+A consolidated and updated CCNA for networking engineers is three courses and one exam which covers the fundamental topics for all network technologies. The new CCNA focuses on IP foundation and security topics along with wireless, virtualization, automation, and network programmability.
+
+There are new DevNet certifications at the associate, specialist and professional levels, to validate your software development skills.
+
+There are specialist certification options to validate your skills in line with your job role and interests. This includes the Cisco Enterprise Advanced Infrastructure Specialist certification.
+
+You can start where you want. There are no prerequisites to start earning your associate, specialist, professional, or expert level certification. Continuing education credits for recertification and ongoing development are now available for CCNA.
+
+- Networking Jobs:
+
+Your CCNA certification will prepare you for a variety of jobs in today’s market. At www.netacad.com you can click the Careers menu and then select Employment opportunities. You can find employment opportunities where you live by using the new program, the Talent Bridge Matching Engine. Search for jobs with Cisco, as well as Cisco partners and distributors seeking Cisco Networking Academy students and alumni.
+
+You can also search for IT jobs using online search engines such as Indeed, Glassdoor, and Monster. Use search terms such as IT, network administrator, network architects, and computer systems administrator. You can also search using the term Cisco CCNA.
+
+---
+Module Practice and Quiz
+
+- What did I learn in this module?
+Networks Affect our Lives
+Network Components
+Network Representations and Topologies
+Common Types of Networks
+Internet Connections
+Reliable Networks
+Network Trends
+Network Security
+The IT Professional
+
+
+
+
+
+
+
+
+

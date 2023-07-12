@@ -1,0 +1,125 @@
+- Internet Access Technologies
+Home users, remote workers, and small offices typically require a connection to an ISP to access the internet.
+
+popular choices include broadband cable, broadband digital subscriber line (DSL), wireless WANs, and mobile services.
+
+SPs offer business-class interconnections. Popular business-class services include business DSL, leased lines, and Metro Ethernet.
+
+---
+
+- Home and Small Office Internet Connections
+Cable:  It provides a high bandwidth, high availability, and an always-on connection to the internet.
+DSL: high bandwidth, high availability, and an always-on connection to the internet.
+Cellular:
+Satellite:
+Dail-up Telephone:
+---
+
+- Businesses Internet Connections
+Dedicated Leased Line:
+Metro Ethernet:
+Business DSL:
+Satellite:
+---
+
+- The Converging Network
+
+Traditional Separate Networks:  Multiple services ran on multiple networks.
+Converged Networks: Converged data networks carry multiple services on one network.
+
+---
+
++++
+
+--- 
+Reliable Networks
+-Network Architecture:
+
+reliability means more than your connection to the internet. 
+
+The term network architecture, in this context, refers to the technologies that support the infrastructure and the programmed services and rules, or protocols, that move data across the network.
+
+there are four basic characteristics that network architects must address to meet user expectations:
+Fault Tolerance
+Scalability
+Quality of Service (QoS)
+Security
+
+- Fault Tolerance:
+
+A fault tolerant network is one that limits the number of affected devices during a failure. 
+Implementing a packet-switched network is one way that reliable networks provide redundancy. 
+
+- Scalability:
+
+A scalable network expands quickly to support new users and applications. 
+It does this without degrading the performance of services that are being accessed by existing users.
+
+- Quality of Service:
+
+QoS becomes a primary mechanism for managing congestion and ensuring reliable delivery of content to all users.
+
+Congestion occurs when the demand for bandwidth exceeds the amount available. 
+
+Network bandwidth is measured in the number of bits that can be transmitted in a single second, or bits per second (bps).
+
+the router can manage the flow of data and voice traffic, giving priority to voice communications if the network experiences congestion.The focus of QoS is to prioritize time-sensitive traffic. 
+
+- Network Security
+
+Network administrators must address two types of network security concerns: network infrastructure security and information security.
+
+Securing the network infrastructure includes physically securing devices that provide network connectivity and preventing unauthorized access to the management software that resides on them.
+
+In order to achieve the goals of network security, there are three primary requirements.
+
+Confidentiality: 
+
+Integrity:
+
+Availability:
+
+---
+Network Trends
+
+- Recent Trends
+
+There are several networking trends that affect organizations and consumers:
+
+Bring Your Own Device (BYOD)
+Online collaboration
+Video communications
+Cloud Computing
+
+- Bring Your Own Device (BYOD)
+
+BYOD enables end users the freedom to use personal tools to access information and communicate across a business or campus network
+
+These include laptops, notebooks, tablets, smart phones, and e-readers.
+
+BYOD means any device, with any ownership, used anywhere.
+
+- Online Collaboration
+
+Collaboration is defined as “the act of working with another or others on a joint project.” Collaboration tools, like Cisco WebEx.
+
+Cisco Webex Teams is a multifunctional collaboration tool that lets you send instant messages to one or more people, post images, and post videos and links. Each team ‘space’ maintains a history of everything that is posted there.
+
+- Video Communications
+
+Video conferencing is a powerful tool for communicating with others, both locally and globally. 
+Video is becoming a critical requirement for effective collaboration as organizations extend across geographic and cultural boundaries.
+
+- Video - Cisco Webex for Huddles
+
+- Cloud Computing
+
+Cloud computing is possible because of data centers.
+
+
+
+
+
+
+
+

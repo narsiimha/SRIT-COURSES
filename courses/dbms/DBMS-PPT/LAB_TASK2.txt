@@ -1,0 +1,10 @@
+UPDATE , DELETE, SELECT CLAUSE
+
+DELETE FROM INSTRUCTOR WHERE iid='101'; 
+//where will delete at least one row if it matches;
+DELETE FROM INSTRUTOR;
+//it deletes all rows
+UPDATE INSTRUCTOR SET iid='101' WHERE iid='102';
+//it updates at least one row if it matches.
+UPDATE INSTRUCTOR SET dept='CSE';
+//it updates all rows.

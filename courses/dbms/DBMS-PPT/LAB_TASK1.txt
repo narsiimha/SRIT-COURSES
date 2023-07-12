@@ -1,0 +1,115 @@
+
+Instructor(ID, NAME, SALARY, DeptName);
+ID: Primary Key,
+DeptName: Foriegn Key,
+
+CREATE TABLE Instructor(
+ID VARCHAR2(10),
+NAME VARCHAR2(20) NOT NULL,
+SALARY NUMBER(20,2),
+DeptName VARCHAR2(20),
+CONSTRAINT instructor_key PRIMARY KEY(ID),
+CONSTRAINT instructor_Fk FORIEGN KEY(DeptName) REFERENCES DEPT(dept_Name) 
+);
+
+CREATE TABLE Instructor(
+ID VARCHAR2(10),
+NAME VARCHAR2(20) NOT NULL,
+SALARY NUMBER(20,2),
+DeptName VARCHAR2(20)
+CONSTRAINT instructor_key PRIMARY KEY(ID),
+FORIEGN KEY(DeptName) REFERENCES DEPT(dept_Name) 
+);
+
+DEPT(dept_name,Building, Budget);
+PK: dept_Name
+
+CREATE TABLE dept(
+dept_name VARCHAR2(20),
+Buliding VARCHAR2(20),
+Budeget NUMBER(40,2)
+CONSTRAINT dept_key PRIMARY KEY(dept_name)
+);
+
+ALTER TABLE COMMAND:
+To implement Alter Command table must exit.
+	-- Add one or more Columns.
+	-- Modify one or More Columns.
+	-- Remove one  column only .
+	-- Rename column or table.
+
+
+CREATE TABLE Instructor(
+IID VARCHAR2(10)
+);
+
+ALTER TABLE Instructor Add  name VARCHAR2(20); //to add one column.
+ALTER TABLE Instructor ADD (Salary NUMBER (20,2), DEPT VARRCHR2(20)); //Mutiple colums;
+
+ALTER TABLE Instructor MODIFY IID INTEGER CONSTRAINT in_key PRIMARY KEY; //single column
+ALTER TABLE Instructor MODIFY ( name VARCHAR2(40) NOT NULL, SALARY NUMBER(30,2) ); // multiple column
+
+ALTER TABLE Instructor RENAME COLUMN iid TO Tid;
+ALTER TABLE Instructor RENAME COLUMN Tid TO iid, name to Tname; // Not Possible
+ALTER TABLE Instructor RENAME to Teacher;
+
+ALTER TABLE Teacher DROP COLUMN dept;
+ALTER TABLE Teacher DROP COLUMN (name, Salary); // NOT Possible
+
+-- Add CONSTRAINT
+-- Remove CONSTRAINT
+-- Enable or Disable the Constraint.
+
+DROP, TRUNCATE TABLE;
+INSERT,
+UPDATE, 
+DELETE.
+
+--Query Language;
+
+CREATE TABLE Instructor(
+Iid VARCHAR2(10),
+name VARCHAR2(20),
+dept_Name VARCHAR2(10),
+Salary NUMBER(20,2)
+);
+
+CREATE TABLE dept(
+dept VARCHAR2(10);
+Building VARCHAR2(20);
+}
+INSERT INTO Instructor VALUES('101','narasimhulu','CSE',25000)
+
+ALTER TABLE ADD CONSTRAINT d_pk PRIMARY KEY(dept);
+ 
+ALTER TABLE Instructor ADD CONSTRAINT In_Pk PRIMARY KEY(Iid);
+ALTER TABLE Instructor ADD CONSTRAINT In_FK FORIEGN KEY(dept_name) REFERNCES DEPT(dept);
+ALTER TABLE Instructor ADD CONSTRAINT Sal_Min_req CHECK (Salary >=8000);
+
+ALTER TABLE Instructor DISABLE CONSTRAINT In_PK;
+ALTER TABLE Instructor DISABLE CONSTRAINT In_FK;
+ALTER TABLE Instructor DISABLE CONSTRAINT Sal_Min_req;
+
+ALTER TABLE Instructor ENABLE CONSTRAINT In_Pk;
+ALTER TABLE Instructor ENABLE CONSTRAINT In_FK;
+ALTER TABLE Instructor ENABLE CONSTRAINT Sal_Min_req;
+
+--TRUNCATE
+	-- To remove all rows in the table.
+	TRUNCATE TABLE Instructor;
+
+--SELECT
+	-- To display data of rows and column for a specified tables after evaluation.
+	-- * Means ALL COLUNMS
+	SELECT * FROM INstructor;
+
+INSERT, UPDATE, DELETE.
+
+
+
+
+
+
+
+
+

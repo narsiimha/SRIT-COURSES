@@ -1,0 +1,424 @@
+Basic Switch and End Device Configuration
+---
+Introduction
+
+- Why should I take this module?
+
+In this module, you will learn how to access Cisco IOS network devices. You will learn basic configuration commands and use them to configure and verify a Cisco IOS device and an end device with an IP address.
+
+- What will I learn to do in this module?
+
+Module Title: Basic Switch and End Device Configuration
+
+Module Objective: Implement initial settings including passwords, IP addressing, and default gateway parameters on a network switch and end devices.
+
+Cisco IOS Access -> Explain how to access a Cisco IOS device for configuration purposes.
+IOS Navigation -> Explain how to navigate Cisco IOS to configure network devices.
+The Command Structure -> Describe the command structure of Cisco IOS software.
+Basic Device Configuration -> Configure a Cisco IOS device using CLI.
+Save Configurations -> Use IOS commands to save the running configuration.
+Ports and Addresses -> Explain how devices communicate across network media.
+Configure IP Addressing -> Configure a host device with an IP address.
+Verify Connectivity -> Verify connectivity between two end devices.
+
+- Cisco IOS Access
+
+All end devices and network devices require an operating system (OS).
+
+As shown in the figure, the portion of the OS that interacts directly with computer hardware is known as the kernel. 
+
+The portion that interfaces with applications and the user is known as the shell. 
+
+The user can interact with the shell using a command-line interface (CLI) or a graphical user interface (GUI).
+
+However, GUIs may not always be able to provide all the features available with the CLI. GUIs can also fail, crash, or simply not operate as specified. For these reasons, network devices are typically accessed through a CLI. The CLI is less resource intensive and very stable when compared to a GUI.
+
+The family of network operating systems used on many Cisco devices is called the Cisco Internetwork Operating System (IOS). Cisco IOS is used on many Cisco routers and switches regardless of the type or size of the device. Each device router or switch type uses a different version of Cisco IOS. 
+
+Note: 
+The operating system on home routers is usually called firmware. 
+The most common method for configuring a home router is by using a web browser-based GUI.
+
+Other Cisco operating systems include IOS XE, IOS XR, and NX-OS.
+
+- Purpose of an OS
+
+A CLI-based network operating system (e.g., the Cisco IOS on a switch or router) enables a network technician to do the following:
+
+Use a keyboard to run CLI-based network programs
+Use a keyboard to enter text and text-based commands
+View output on a monitor
+
+Cisco networking devices run particular versions of the Cisco IOS. The IOS version is dependent on the type of device being used and the required features. While all devices come with a default IOS and feature set, it is possible to upgrade the IOS version or feature set to obtain additional capabilities.
+
+- Access Methods
+
+Console: 
+This is a physical management port that provides out-of-band access to a Cisco device.
+
+Out-of-band access refers to access via a dedicated management channel that is used for device maintenance purposes only.
+
+The advantage of using a console port is that the device is accessible even if no networking services are configured, such as performing the initial configuration.
+
+A computer running terminal emulation software and a special console cable to connect to the device are required for a console connection.
+
+SSH:
+SSH is an in-band and recommended method for remotely establishing a secure CLI connection, through a virtual interface, over a network.
+
+Unlike a console connection, SSH connections require active networking services on the device, including an active interface configured with an address.
+
+Most versions of Cisco IOS include an SSH server and an SSH client that can be used to establish SSH sessions with other devices.
+
+Telnet:
+
+Telnet is an insecure, in-band method of remotely establishing a CLI session, through a virtual interface, over a network. 
+
+Unlike SSH, Telnet does not provide a secure, encrypted connection and should only be used in a lab environment. 
+
+User authentication, passwords, and commands are sent over the network in plaintext. 
+The best practice is to use SSH instead of Telnet. 
+
+Cisco IOS includes both a Telnet server and Telnet client.
+
+Note: Some devices, such as routers, may also support a legacy auxiliary port that was used to establish a CLI session remotely over a telephone connection using a modem. Similar to a console connection, the AUX port is out-of-band and does not require networking services to be configured or available.
+
+
+- Terminal Emulation Programs
+
+There are several terminal emulation programs you can use to connect to a networking device either by a serial connection over a console port, or by an SSH/Telnet connection. These programs allow you to enhance your productivity by adjusting window sizes, changing font sizes, and changing color schemes.
+
+Putty
+Tera Term
+SecureCRT
+
+- Check Your Understanding - Cisco IOS Access
+
+---
+IOS Navigation
+
+- Primary Command Modes
+
+As a security feature, the Cisco IOS software separates management access into the following two command modes:
+
+User EXEC Mode:
+This mode has limited capabilities but is useful for basic operations. 
+It allows only a limited number of basic monitoring commands but does not allow the execution of any commands that might change the configuration of the device.
+The user EXEC mode is identified by the CLI prompt that ends with the > symbol.
+
+Privileged EXEC Mode:
+To execute configuration commands, a network administrator must access privileged EXEC mode. 
+Higher configuration modes, like global configuration mode, can only be reached from privileged EXEC mode.
+The privileged EXEC mode can be identified by the prompt ending with the # symbol.
+
+- Configuration Mode and Subconfiguration Modes
+
+To configure the device, the user must enter global configuration mode, which is commonly called global config mode.
+
+From global config mode, CLI configuration changes are made that affect the operation of the device as a whole. 
+
+Global configuration mode is identified by a prompt that ends with (config)# after the device name, such as Switch(config)#.
+
+Global configuration mode is accessed before other specific configuration modes. From global config mode, the user can enter different subconfiguration modes. Each of these modes allows the configuration of a particular part or function of the IOS device. 
+
+Two common subconfiguration modes include:
+
+Line Configuration Mode - Used to configure console, SSH, Telnet, or AUX access.
+
+Interface Configuration Mode - Used to configure a switch port or router network interface.
+
+When the CLI is used, the mode is identified by the command-line prompt that is unique to that mode. By default, every prompt begins with the device name. Following the name, the remainder of the prompt indicates the mode. 
+
+For example, the default prompt for line configuration mode is Switch(config-line)# and the default prompt for interface configuration mode is Switch(config-if)#.
+
+- Navigate Between IOS Modes:
+
+To move from user EXEC mode to privileged EXEC mode, use the enable command. Use the disable privileged EXEC mode command to return to user EXEC mode.
+
+To move from any subconfiguration mode to the privileged EXEC mode, enter the end command or enter the key combination Ctrl+Z.
+
+ou can also move directly from one subconfiguration mode to another. Notice how after selecting an interface, the command prompt changes from (config-line)# to (config-if)#.
+
+- A Note About Syntax Checker Activities
+
+In each Syntax Checker, you are given a set of instructions to enter a specific set of commands. You cannot progress in Syntax Checker unless the exact and full command is entered as specified. More advanced simulation tools, such as Packet Tracer, let you enter abbreviated commands, much as you would do on real equipment.
+
+- Syntax Checker - Navigate Between IOS Modes
+
+Student Practice:
+Enter privileged EXEC mode using the enable command.
+
+Switch>enable
+Return to user EXEC mode using the disable command.
+
+Switch#disable
+Re-enter privileged EXEC mode.
+
+Switch>enable
+Enter global configuration mode using the configure terminal command.
+
+Switch#configure terminal
+Exit global configuration mode and return to privileged EXEC mode using the exit command.
+
+Switch(config)#exit
+Re-enter global configuration mode.
+
+Switch#configure terminal
+Enter line subconfiguration mode for the console port using the line console 0 command.
+
+Switch(config)#line console 0
+Return to global configuration mode using the exit command.
+
+Switch(config-line)#exit
+Enter VTY line subconfiguration mode using the line vty 0 15 command.
+
+Switch(config)#line vty 0 15
+Return to global configuration mode.
+
+Switch(config-line)#exit
+Enter the VLAN 1 interface subconfiguration mode using the interface vlan 1 command.
+
+Switch(config)#interface vlan 1
+From interface configuration mode, switch to line console subconfiguration mode using the line console 0 global configuration command.
+
+Switch(config-if)#line console 0
+Return to privileged EXEC mode using the end command.
+
+Switch(config-line)#end
+You successfully navigated between the various IOS command line modes.
+
+- Check Your Understanding - IOS Navigation
+
+---
+The Command Structure
+
+- Basic IOS Command Structure
+
+  Switch>Command Keywords/Arguments
+
+ Keyword - This is a specific parameter defined in the operating system (in the figure, ip protocols).
+
+Argument - This is not predefined; it is a value or variable defined by the user (in the figure, 192.168.10.5).
+
+Eg: 
+Switch>show ip Protocols
+Switch>ping 192.168.10.5
+
+- IOS Command Syntax Check
+
+Convention	Description
+
+boldface ->	Boldface text indicates commands and keywords that you enter literally as shown.
+italics	->Italic text indicates arguments for which you supply values.
+
+[x]	-> Square brackets indicate an optional element (keyword or argument).
+{x}	 -> Braces indicate a required element (keyword or argument).
+
+[x {y | z }]	-> Braces and vertical lines within square brackets indicate a required choice within an optional element. Spaces are used to clearly delineate parts of the command.
+
+- IOS Help Features
+
+The IOS has two forms of help available:
+ 
+context-sensitive help and command syntax check.
+
+To access context-sensitive help, simply enter a question mark, ?, at the CLI.
+
+Command syntax check verifies that a valid command was entered by the user. When a command is entered, the command line interpreter evaluates the command from left to right. If the interpreter understands the command, the requested action is executed, and the CLI returns to the appropriate prompt. However, if the interpreter cannot understand the command being entered, it will provide feedback describing what is wrong with the command.
+
+- Video - Context Sensitive Help and Command Syntax Check
+
+- Hot Keys and Shortcuts
+
+The IOS CLI provides hot keys and shortcuts that make configuring, monitoring, and troubleshooting easier.
+
+Commands and keywords can be shortened to the minimum number of characters that identify a unique selection.
+
+The table lists keystrokes to enhance command line editing.
+
+Tab -> Completes a partial command name entry.
+Backspace -> Erases the character to the left of the cursor.
+Ctrl+D -> Erases the character at the cursor.
+Ctrl+K -> Erases all characters from the cursor to the end of the command line.
+Esc D -> Erases all characters from the cursor to the end of the word.
+Ctrl+U or Ctrl+X -> Erases all characters from the cursor back to the beginning of the command line.
+Ctrl+W -> Erases the word to the left of the cursor.
+Ctrl+A -> Moves the cursor to the beginning of the line.
+Left Arrow or Ctrl+B -> Moves the cursor one character to the left.
+Esc B -> Moves the cursor back one word to the left.
+Esc F ->Moves the cursor forward one word to the right.
+Right Arrow or Ctrl+F -> Moves the cursor one character to the right.
+Ctrl+E -> Moves the cursor to the end of command line.
+Up Arrow or Ctrl+P -> Recalls the previous command in the history buffer, beginning with the most recent command.
+Down Arrowor Ctrl+N ->Goes to the next line in the the history buffer.
+Ctrl+R or Ctrl+I or Ctrl+L ->  Redisplays the system prompt and command line after a console message is received.
+
+Note: While the Delete key typically deletes the character to the right of the prompt, the IOS command structure does not recognize the Delete key.
+
+When a command output produces more text than can be displayed in a terminal window, the IOS will display a “--More--” prompt. The following table describes the keystrokes that can be used when this prompt is displayed. 
+
+Enter Key -> 	Displays the next line
+Space Bar -> Displays the next screen.
+Any other key * -> Ends the display string, returning to previous prompt.
+* Except "y", which answers "yes" to the --More-- prompt, and acts like the Space bar
+
+This table lists commands used to exit out of an operation.
+
+Ctrl-C -> When in any configuration mode, ends the configuration mode and returns to privileged EXEC mode. When in setup mode, aborts back to the command prompt.
+Ctrl-Z -> When in any configuration mode, ends the configuration mode and returns to privileged EXEC mode.
+Ctrl-Shift-6 -> All-purpose break sequence used to abort DNS lookups, traceroutes, pings, etc.
+
+- Video - Hot Keys and Shortcuts
+Ctrl+A, Ctrl+C, Ctrl+R
+Ctrl+Z, end, Ctrl+Shift+6 are Discussed.
+Tab Key Completion.
+Command Shoterning
+Up and Down Arrows.
+
+- Packet Tracer - Navigate the IOS
+
+- Lab - Navigate the IOS by Using Tera Term for Console Connectivity
+
+---
+Basic Device Configuration:
+
+- Device Names
+
+The first configuration command on any device should be to give it a unique device name or hostname. By default, all devices are assigned a factory default name. For example, a Cisco IOS switch is "Switch."
+
+Here are some important naming guidelines for hosts:
+
+Start with a letter
+Contain no spaces
+End with a letter or digit
+Use only letters, digits, and dashes
+Be less than 64 characters in length
+
+From global configuration mode, enter the command hostname followed by the name of the switch and press Enter. Notice the change in the command prompt name.
+
+Note: To return the switch to the default prompt, use the no hostname global config command.
+
+Switch>enable
+Switch# Configure terminal
+Switch(config)# hostname Sw-Floor-1
+Sw-Floor-1(config)#
+
+- Password Guidelines
+
+Cisco IOS can be configured to use hierarchical mode passwords to allow different access privileges to a network device.
+
+All networking devices should limit administrative access by securing privileged EXEC, user EXEC, and remote Telnet access with passwords. In addition, all passwords should be encrypted and legal notifications provided.
+
+When choosing passwords, use strong passwords that are not easily guessed. There are some key points to consider when choosing passwords:
+
+Use passwords that are more than eight characters in length.
+Use a combination of upper and lowercase letters, numbers, special characters, and/or numeric sequences.
+Avoid using the same password for all devices.
+Do not use common words because they are easily guessed.
+
+Note: Most of the labs in this course use simple passwords such as cisco or class. These passwords are considered weak and easily guessable and should be avoided in production environments. We only use these passwords for convenience in a classroom setting, or to illustrate configuration examples.
+
+- Configure Passwords
+
+When you initially connect to a device, you are in user EXEC mode. This mode is secured using the console.
+
+To secure user EXEC mode access, enter line console configuration mode using the line console 0 global configuration command, as shown in the example. The zero is used to represent the first (and in most cases the only) console interface. Next, specify the user EXEC mode password using the password password command. Finally, enable user EXEC access using the login command.
+
+Sw-Floor-1# configure terminal
+Sw-Floor-1(config)# line console 0
+Sw-Floor-1(config-line)# password cisco
+Sw-Floor-1(config-line)# login
+Sw-Floor-1(config-line)# end
+Sw-Floor-1#
+
+To have administrator access to all IOS commands including configuring a device, you must gain privileged EXEC mode access. It is the most important access method because it provides complete access to the device.
+
+To secure privileged EXEC access, use the enable secret password global config command, as shown in the example.
+
+Sw-Floor-1# configure terminal
+Sw-Floor-1(config)# enable secret class
+Sw-Floor-1(config)# exit
+Sw-Floor-1#
+
+Virtual terminal (VTY) lines enable remote access using Telnet or SSH to the device. Many Cisco switches support up to 16 VTY lines that are numbered 0 to 15.
+
+To secure VTY lines, enter line VTY mode using the line vty 0 15 global config command. Next, specify the VTY password using the password password command. Lastly, enable VTY access using the login command.
+
+Sw-Floor-1# configure terminal
+Sw-Floor-1(config)# line vty 0 15
+Sw-Floor-1(config-line)# password cisco 
+Sw-Floor-1(config-line)# login 
+Sw-Floor-1(config-line)# end
+Sw-Floor-1#
+
+- Encrypt Passwords
+
+The startup-config and running-config files display most passwords in plaintext. This is a security threat because anyone can discover the passwords if they have access to these files.
+
+To encrypt all plaintext passwords, use the service password-encryption global config command as shown in the example.
+
+Sw-Floor-1# configure terminal
+Sw-Floor-1(config)# service password-encryption
+Sw-Floor-1(config)#
+
+The command applies weak encryption to all unencrypted passwords. This encryption applies only to passwords in the configuration file, not to passwords as they are sent over the network. The purpose of this command is to keep unauthorized individuals from viewing passwords in the configuration file.
+
+Use the show running-config command to verify that passwords are now encrypted.
+
+Sw-Floor-1(config)# end
+Sw-Floor-1# show running-config
+!
+(Output omitted)
+!
+line con 0
+password 7 094F471A1A0A
+login
+!
+line vty 0 4
+ password 7 094F471A1A0A
+ login
+line vty 5 15
+ password 7 094F471A1A0A
+ login
+!
+!
+end
+
+- Banner Messages
+
+Although requiring passwords is one way to keep unauthorized personnel out of a network, it is vital to provide a method for declaring that only authorized personnel should attempt to access the device. To do this, add a banner to the device output. Banners can be an important part of the legal process in the event that someone is prosecuted for breaking into a device. Some legal systems do not allow prosecution, or even the monitoring of users, unless a notification is visible.
+
+To create a banner message of the day on a network device, use the banner motd # the message of the day # global config command. The “#” in the command syntax is called the delimiting character. It is entered before and after the message. The delimiting character can be any character as long as it does not occur in the message. For this reason, symbols such as the "#" are often used. After the command is executed, the banner will be displayed on all subsequent attempts to access the device until the banner is removed.
+
+Sw-Floor-1# configure terminal
+Sw-Floor-1(config)# banner motd #Authorized Access Only#
+
+- Video - Secure Administrative Access to a Switch
+
+See video
+ok fine
+
+- Syntax Checker - Basic Device Configuration
+
+completed
+
+- Check Your Understanding - Basic Device Configuration
+
+completed
+
+---
+Save Configurations
+
+- Configuration Files
+
+
+
+
+
+
+
+
+
+
+ 
+
+
